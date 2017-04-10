@@ -20,7 +20,7 @@ A full fledged **social web app** (news feed, posts/tweets, likes, comments, sha
 - **Email:** anirban.nick@gmail.com
 - **Copyright(C):** 2017, Anirban Roy Das <anirban.nick@gmail.com>
 
-Check  ` ci-testing-python/LICENSE  ` file for full Copyright notice.
+Check  ` juwo/LICENSE  ` file for full Copyright notice.
 
 
 
