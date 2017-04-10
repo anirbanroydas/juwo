@@ -1,0 +1,244 @@
+
+.cocktail-stream-wrapper {
+	 position: fixed;
+  	right: 30px;
+    top:100px;
+  	min-width: 200px;
+  	max-width: 250px;
+    
+  	margin: 2px 0 0;
+  	background-color: #fff;
+  	border: 1px solid #ccc;
+  	border: 1px solid rgba(0, 0, 0, 0.15);
+  	border-radius: 4px;
+  	background-clip: padding-box;
+
+    
+}
+
+
+.cocktail-stream-wrapper .cocktail-stream-body {
+  max-height: 420px;
+  min-height: 400px;
+  min-width: 200px;
+  max-width: 250px;
+  overflow: scroll;
+  margin-bottom: 0;
+  margin-top: 0;
+  /*padding: 0;*/
+}
+
+.cocktail-stream-wrapper .cocktail-stream-header {
+  /*position: fixed;*/
+  width: 249px;
+  max-width: 250px;
+  border-right: 1px solid rgba(0, 0, 0, 0.14902);
+  /*height: 40px;*/
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+/*Custom Style Notifiction frmo bootstrap-notifications css styles for 
+coktail stream*/
+
+
+.cocktail-notification-left-img {
+    max-width: 30px;
+}
+
+
+.dropdown-notifications .dropdown-toolbar-actions {
+  padding-top: 0;
+  margin-top: -2px;
+
+  font-family:  'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+}
+
+
+
+.dropdown-notifications .dropdown-toolbar-title {
+    font-family:  'Open Sans';
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+}
+
+
+.notifications .cocktail-notification-title {
+    font-family:  'Open Sans';
+    font-weight: 400;
+    font-size: 12px;
+    color: #333;
+}
+
+
+
+.notifications .cocktail-notification-resource-link {
+    text-decoration: none;
+    font-family:  'Open Sans';
+    font-weight: 600;
+    font-size: 12px;
+    color: #222;
+}
+
+
+
+.notifications .cocktail-notification-resource-link-comment {
+
+    color: #07C;
+    text-decoration: none;
+    font-family:  'Open Sans';
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.notifications .cocktail-notification-resource-link-mention {
+
+    color: #07C;
+    text-decoration: none;
+    font-family:  'Open Sans';
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+
+.notifications .cocktail-notification-resource-link-hashtag {
+    color: #07C;
+    text-decoration: none;
+    font-family:  'Open Sans';
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+.notifications .cocktail-notification-resource-link-comment-value {
+    
+    font-weight: 600;
+    color: #222;
+}
+
+.notifications .cocktail-notification-resource-link-username {
+   text-decoration: none;
+    font-family:  'Open Sans';
+    font-weight: 400;
+    font-size: 12px;
+    color: #999;
+    padding-right: 3px;
+}
+
+
+.notifications .cocktail-notification-resource-link-username:before {
+ /* content: "\00b7";*/
+  content: " ";
+  /*padding-left: 1px;
+  padding-right: 1px;*/
+  font-weight: 400;
+  font-size: 11px;
+}
+
+
+
+
+.notifications .cocktail-notification-resource-link-time {
+    font-family:  'Open Sans';
+    font-weight: 400;
+    font-size: 11px;
+    color: #999;
+    /*margin-left: 5px;*/
+}
+
+
+
+.notifications .cocktail-notification-resource-link:hover,
+.notifications .cocktail-notification-resource-link-time:hover
+{
+    text-decoration: none;
+}
+
+
+.notifications .cocktail-notification-resource-link-comment:hover,
+.notifications .cocktail-notification-resource-link-mention:hover,
+.notifications .cocktail-notification-resource-link-hashtag:hover
+{
+    text-decoration: none;
+    color: orange;
+}
+
+
+
+
+.cocktail-stream-img {
+  max-height: 18px;
+  margin-left: 7px;
+}
+
+
+
+/*
+.notifications .notification-resource-link-time:before {
+   content: "\00b7";
+}
+*/
+
+
+.notification-footer {
+    font-family:  'Open Sans';
+    font-weight: 400;
+    font-size: 11px;
+    color: #999;
+}
+
+
+/*
+.dropdown-footer a.notification-dropdown-footer {
+  text-align: center;
+  
+  
+}*/
+
+.notification-dropdown-footer {
+  text-align: center;
+}
+
+
+.cocktail-empty-notification {
+  min-height: 400px;
+  max-height: 420px;
+  position: relative;
+}
+
+
+.cocktail-empty-notification-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:75%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  font-family:  'Open Sans';
+    font-weight: 400;
+    font-size: 13px;
+    color: #666;
+
+  /*width: 300px;
+  height: 100px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -70px 0 0 -170px;*/
+
+}
+

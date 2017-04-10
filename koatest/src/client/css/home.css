@@ -1,0 +1,187 @@
+/* Space out content a bit */
+body
+{
+    padding-top: 0;
+    padding-bottom: 20px;
+    background-color: #f5f5f5;
+}
+
+
+
+
+
+/*.navbar-default  .navbar-brand {
+    color: #5cb85c;
+}
+*/
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer
+{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom page header */
+.header
+{
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3
+{
+    line-height: 40px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Custom page footer */
+.footer
+{
+    padding-top: 19px;
+
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+.body-container-before-loading {
+    margin:0 auto;
+    /*background:#fff;*/
+    position:absolute;
+    left:50%;
+    top:50%;
+    /*margin-left:-250px;*/
+   /* margin-top:-250px;*/
+}
+
+
+
+
+.before-loading-name {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.before-loading-name-status {
+    font-family: 'Open Sans';
+    font-size: 23px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+
+.before-loading-name-message {
+    font-family: 'Open Sans';
+    font-size: 19px;
+    font-weight: 300;
+    color: #414141;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+
+
+
+/* Main marketing message and sign up button */
+.jumbotron
+{
+    text-align: center;
+    
+    /*border-bottom: 1px solid #e5e5e5;*/
+    /*border-bottom: 1px solid #dbdbdb;*/
+    background-color: #fff;
+    border: 1px solid #e8e8e8; /* #efefef; */
+    border-radius: 0;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.jumbotron .btn
+{
+    font-size: 14px;
+
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+.loading-img {
+    max-width: 25px;
+}
+
+
+.home-welcome-item {
+    margin-top: 100px;
+}
+
+
+
+.home-welcome-item-name {
+    font-family: 'Open Sans';
+    font-size: 23px;
+    font-weight: 400;
+    color: #414141;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+
+.container-narrow > hr
+{
+    margin: 30px 0;
+}
+
+
+
+
+/* Customize Responsive Elements */
+
+
+@media (max-width: 767px) {
+    
+ 
+    .jumbotron-before {
+        background-color: transparent;
+        border: 0;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 768px)
+{
+    .body-container-before-loading
+    {
+        max-width: 400px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+

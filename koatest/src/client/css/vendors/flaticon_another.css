@@ -1,0 +1,107 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 27/11/2016 08:09
+  	*/
+
+@font-face {
+  font-family: "Flaticon-Another";
+  src: url("../../fonts/flaticon_another/Flaticon.eot");
+  src: url("../../fonts/flaticon_another/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../../fonts/flaticon_another/Flaticon.woff") format("woff"),
+       url("../../fonts/flaticon_another/Flaticon.ttf") format("truetype"),
+       url("../../fonts/flaticon_another/Flaticon.svg#Flaticon") format("svg");
+  /*src: url("/static/fonts/flaticon_another/Flaticon.eot");
+  src: url("/static/fonts/flaticon_another/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("/static/fonts/flaticon_another/Flaticon.woff") format("woff"),
+       url("/static/fonts/flaticon_another/Flaticon.ttf") format("truetype"),
+       url("/static/fonts/flaticon_another/Flaticon.svg#Flaticon") format("svg");*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon-Another";
+    src: url("../../fonts/flaticon_another/Flaticon.svg#Flaticon") format("svg");
+    /*src: url("/static/fonts/flaticon_another/Flaticon.svg#Flaticon") format("svg");*/
+  }
+}
+
+
+
+
+
+
+[class^="flaticon-another-"]:before, [class*=" flaticon-another-"]:before,
+[class^="flaticon-another-"]:after, [class*=" flaticon-another-"]:after {   
+        font-family: Flaticon-Another;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /*color: #111;*/
+        color: inherit;
+        /*font-size: 20px;*/
+        /*margin-left: 20px;*/
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+.flaticon-another-arrow:before { content: "\f100"; }
+.flaticon-another-arrows:before { content: "\f101"; }
+.flaticon-another-arrows-1:before { content: "\f102"; }
+.flaticon-another-arrows-2:before { content: "\f103"; }
+.flaticon-another-arrows-3:before { content: "\f104"; }
+.flaticon-another-arrows-4:before { content: "\f105"; }
+.flaticon-another-arrows-5:before { content: "\f106"; }
+.flaticon-another-arrows-6:before { content: "\f107"; }
+.flaticon-another-arrows-7:before { content: "\f108"; }
+.flaticon-another-arrows-8:before { content: "\f109"; }
+.flaticon-another-black:before { content: "\f10a"; }
+.flaticon-another-favorite:before { content: "\f10b"; }
+.flaticon-another-favorite-1:before { content: "\f10c"; }
+.flaticon-another-interface:before { content: "\f10d"; }
+.flaticon-another-interface-1:before { content: "\f10e"; }
+.flaticon-another-interface-2:before { content: "\f10f"; }
+.flaticon-another-interface-3:before { content: "\f110"; }
+.flaticon-another-interface-4:before { content: "\f111"; }
+.flaticon-another-interface-5:before { content: "\f112"; }
+.flaticon-another-interface-6:before { content: "\f113"; }
+.flaticon-another-interface-7:before { content: "\f114"; }
+.flaticon-another-repeat:before { content: "\f115"; }
+.flaticon-another-repeat-1:before { content: "\f116"; }
+.flaticon-another-repeat-2:before { content: "\f117"; }
+.flaticon-another-repeat-3:before { content: "\f118"; }
+.flaticon-another-repeat-4:before { content: "\f119"; }
+.flaticon-another-repeat-5:before { content: "\f11a"; }
+.flaticon-another-repeat-6:before { content: "\f11b"; }
+.flaticon-another-repeat-7:before { content: "\f11c"; }
+.flaticon-another-repeat-8:before { content: "\f11d"; }
+.flaticon-another-retweet:before { content: "\f11e"; }
+.flaticon-another-retweet-1:before { content: "\f11f"; }
+.flaticon-another-retweet-2:before { content: "\f120"; }
+.flaticon-another-retweet-arrows:before { content: "\f121"; }
+.flaticon-another-retweet-arrows-1:before { content: "\f122"; }
+.flaticon-another-retweet-arrows-couple-outline:before { content: "\f123"; }
+.flaticon-another-retweet-arrows-couple-symbol:before { content: "\f124"; }
+.flaticon-another-retweet-arrows-couple-symbol-square-variant:before { content: "\f125"; }
+.flaticon-another-retweet-arrows-symbol:before { content: "\f126"; }
+.flaticon-another-retweet-circular-button:before { content: "\f127"; }
+.flaticon-another-retweet-symbol:before { content: "\f128"; }
+.flaticon-another-shapes:before { content: "\f129"; }
+.flaticon-another-shapes-1:before { content: "\f12a"; }
+.flaticon-another-shapes-2:before { content: "\f12b"; }
+.flaticon-another-square:before { content: "\f12c"; }
+.flaticon-another-web:before { content: "\f12d"; }
+
+
+
+

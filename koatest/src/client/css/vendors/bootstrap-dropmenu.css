@@ -1,0 +1,513 @@
+/*!
+ * bootstrap-dropmenu v0.9.0 (https://skywalkapps.github.io/bootstrap-dropmenu)
+ * Copyright 2016 Martin Staněk
+ * Licensed under MIT
+ */
+
+ .navbar-default .navbar-nav .dropdown .dropdown-toggle{
+       background-color: transparent;
+}
+
+.navbar-default .navbar-nav .dropdown .dropdown-toggle:focus,
+.navbar-default .navbar-nav .dropdown .dropdown-toggle:hover
+{
+    /*color: #fff;*/
+    background-color: transparent;
+}
+
+
+.navbar-default .navbar-nav > .open >a, 
+.navbar-default .navbar-nav > .open >a:focus, 
+.navbar-default .navbar-nav > .open >a:hover {
+    color: #111;
+    background-color: transparent;
+}
+
+
+
+
+.dropdown-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 200px;
+  max-width: 330px;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+.dropdown-container > .dropdown-menu {
+  position: static;
+  z-index: 1000;
+  float: none!important;
+  padding: 10px 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  max-height: 330px;
+  overflow-y: auto;
+}
+.dropdown-container > .dropdown-menu + .dropdown-menu {
+  padding-top: 0;
+}
+.dropdown-menu > li > a {
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-transition: none;
+  transition: none;
+}
+.dropdown-toggle {
+  cursor: pointer;
+}
+.dropdown-header {
+  white-space: nowrap;
+}
+.open > .dropdown-container > .dropdown-menu,
+.open > .dropdown-container {
+  display: block;
+}
+.dropdown-toolbar {
+  padding-top: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px 4px 0 0;
+}
+.dropdown-toolbar > .form-group {
+  margin: 5px -10px;
+}
+.dropdown-toolbar .dropdown-toolbar-actions {
+  float: right;
+}
+.dropdown-toolbar .dropdown-toolbar-title {
+  margin: 0;
+  font-size: 14px;
+}
+.dropdown-footer {
+  padding: 5px 20px;
+  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 4px 4px;
+}
+.anchor-block small {
+  display: none;
+}
+@media (min-width: 992px) {
+  .anchor-block small {
+    display: block;
+    font-weight: normal;
+    color: #777777;
+  }
+  .dropdown-menu > li > a.anchor-block {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+@media (min-width: 992px) {
+  .dropdown.hoverable:hover > ul {
+    display: block;
+  }
+}
+.dropdown-position-topright {
+  top: auto;
+  right: 0;
+  bottom: 100%;
+  left: auto;
+  margin-bottom: 2px;
+}
+.dropdown-position-topleft {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 2px;
+}
+.dropdown-position-bottomright {
+  right: 0;
+  left: auto;
+}
+
+
+
+/*This is another enhancement on top of this
+
+Documentation: https://behigh.github.io/bootstrap_dropdowns_enhancement
+Github : https://github.com/behigh/bootstrap_dropdowns_enhancement
+
+*/
+
+.dropdown-container.pull-right-extend {
+  right: -40px;
+  left: auto;
+}
+
+
+.dropdown-container.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-container.pull-top {
+  bottom: 100%;
+  top: auto;
+  margin: 0 0 2px;
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
+}
+.dropdown-container.pull-center {
+  right: 50%;
+  left: auto;
+}
+.dropdown-container.pull-middle {
+  right: 100%;
+  margin: 0 2px 0 0;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  left: auto;
+}
+.dropdown-container.pull-middle.pull-right {
+  right: auto;
+  left: 100%;
+  margin: 0 0 0 2px;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown-container.pull-middle.pull-center {
+  right: 50%;
+  margin: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-container.bullet {
+  margin-top: 15px;
+}
+
+
+/*
+.dropdown-container.bullet:before
+{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #dedede;
+  z-index: 14;
+  
+  top:-10px;
+  left: 35px;
+}
+
+.dropdown-container.bullet:after{
+  
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  z-index: 15;
+  top:-8px;
+  left: 37px;
+}*/
+
+
+.dropdown-container.bullet:before {
+  width: 10px;
+  height: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #dedede;
+
+  /* main
+  width: 0;
+  height: 0;*/
+  content: '';
+  display: inline-block;
+  position: absolute;
+  /*border-color: transparent;
+  border-style: solid;*/
+  -webkit-transform: rotate(360deg);
+
+  /* main
+  border-width: 0 7px 7px;
+  border-bottom-color: #cccccc;
+  border-bottom-color: rgba(0, 0, 0, 0.15);*/
+  
+  /* main
+  top: -7px;
+  left: 9px;*/
+
+  top:-10px;
+  left: 39px;
+}
+.dropdown-container.bullet:after {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+
+  /*width: 0;
+  height: 0;*/
+  content: '';
+  display: inline-block;
+  position: absolute;
+  /*border-color: transparent;
+  border-style: solid;*/
+  -webkit-transform: rotate(360deg);
+  /*border-width: 0 6px 6px;
+  border-bottom-color: #ffffff;*/
+  /*top: -6px;
+  left: 10px;*/
+  top:-8px;
+  left: 41px;
+}
+
+
+.dropdown-container.bullet.pull-right-extend:before {
+  left: auto;
+  right: 39px;
+}
+.dropdown-container.bullet.pull-right-extend:after {
+  left: auto;
+  right: 41px;
+}
+
+
+.dropdown-container.bullet.pull-right:before {
+  left: auto;
+  right: 9px;
+}
+.dropdown-container.bullet.pull-right:after {
+  left: auto;
+  right: 10px;
+}
+
+
+.dropdown-container.bullet.pull-top {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.dropdown-container.bullet.pull-top:before {
+  top: auto;
+  bottom: -7px;
+  border-bottom-width: 0;
+  border-top-width: 7px;
+  border-top-color: #cccccc;
+  border-top-color: rgba(0, 0, 0, 0.15);
+}
+.dropdown-container.bullet.pull-top:after {
+  top: auto;
+  bottom: -6px;
+  border-bottom: none;
+  border-top-width: 6px;
+  border-top-color: #ffffff;
+}
+.dropdown-container.bullet.pull-center:before {
+  left: auto;
+  right: 50%;
+  margin-right: -7px;
+}
+.dropdown-container.bullet.pull-center:after {
+  left: auto;
+  right: 50%;
+  margin-right: -6px;
+}
+.dropdown-container.bullet.pull-middle {
+  margin-right: 8px;
+}
+.dropdown-container.bullet.pull-middle:before {
+  top: 50%;
+  left: 100%;
+  right: auto;
+  margin-top: -7px;
+  border-right-width: 0;
+  border-bottom-color: transparent;
+  border-top-width: 7px;
+  border-left-color: #cccccc;
+  border-left-color: rgba(0, 0, 0, 0.15);
+}
+.dropdown-container.bullet.pull-middle:after {
+  top: 50%;
+  left: 100%;
+  right: auto;
+  margin-top: -6px;
+  border-right-width: 0;
+  border-bottom-color: transparent;
+  border-top-width: 6px;
+  border-left-color: #ffffff;
+}
+.dropdown-container.bullet.pull-middle.pull-right {
+  margin-right: 0;
+  margin-left: 8px;
+}
+.dropdown-container.bullet.pull-middle.pull-right:before {
+  left: -7px;
+  border-left-width: 0;
+  border-right-width: 7px;
+  border-right-color: #cccccc;
+  border-right-color: rgba(0, 0, 0, 0.15);
+}
+.dropdown-container.bullet.pull-middle.pull-right:after {
+  left: -6px;
+  border-left-width: 0;
+  border-right-width: 6px;
+  border-right-color: #ffffff;
+}
+.dropdown-container.bullet.pull-middle.pull-center {
+  margin-left: 0;
+  margin-right: 0;
+}
+.dropdown-container.bullet.pull-middle.pull-center:before {
+  border: none;
+  display: none;
+}
+.dropdown-container.bullet.pull-middle.pull-center:after {
+  border: none;
+  display: none;
+}
+
+
+
+
+/*Above Enchancements end here*/
+
+
+.dropmenu-item-label {
+  white-space: nowrap;
+}
+.dropmenu-item-content {
+  position: absolute;
+  text-align: right;
+  max-width: 60px;
+  right: 20px;
+  color: #777777;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+small.dropmenu-item-content {
+  line-height: 20px;
+}
+.dropdown-menu > li > a.dropmenu-item {
+  position: relative;
+  padding-right: 66px;
+}
+.dropdown-submenu .dropmenu-item-content {
+  right: 40px;
+}
+.dropdown-menu > li.dropdown-submenu > a.dropmenu-item {
+  padding-right: 86px;
+}
+.dropdown-inverse .dropdown-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  color: #cccccc;
+}
+.dropdown-inverse .dropdown-container > .dropdown-toolbar,
+.dropdown-inverse .dropdown-container > .dropdown-footer,
+.dropdown-inverse .dropdown-container > .dropdown-menu {
+  background-color: transparent;
+  border-color: #2b2b2b;
+}
+.dropdown-inverse .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
+.dropdown-inverse .dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #2b2b2b;
+}
+.dropdown-inverse .dropdown-menu > li > a {
+  color: #cccccc;
+}
+.dropdown-inverse .dropdown-menu > li > a:hover,
+.dropdown-inverse .dropdown-menu > li > a:focus {
+  color: #fff;
+  background-color: #262626;
+}
+.dropdown-inverse .dropdown-menu > .active > a,
+.dropdown-inverse .dropdown-menu > .active > a:hover,
+.dropdown-inverse .dropdown-menu > .active > a:focus {
+  color: #fff;
+  background-color: #337ab7;
+}
+.dropdown-inverse .dropdown-menu > .disabled > a,
+.dropdown-inverse .dropdown-menu > .disabled > a:hover,
+.dropdown-inverse .dropdown-menu > .disabled > a:focus {
+  color: #777777;
+}
+.dropdown-inverse .dropdown-header {
+  color: #777777;
+}
+.table > thead > tr > th.col-actions {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.table > thead > tr > th.col-actions .dropdown-toggle {
+  color: #777777;
+}
+
+
+
+
+
+/*Further custom styles*/
+
+
+
+.dropdown-menu-link {
+	font-family:  'Open Sans';
+    font-weight: 600;
+    font-size: 13px;
+    color: #414141;
+}
+
+
+
+.dropdown-menu-link .flaticon {
+	font-size: 13px;
+}
+
+
+.dropdown-toolbar-about {
+	font-family:  'Open Sans';
+    font-weight: 400;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/*
+.dropdown-footer-about {
+	background: #f3f3f3;
+}
+*/
+
+
+.dropdown-footer-about .dropmenu-item-label,
+.dropdown-footer-about .dropmenu-item-content
+{
+	font-family:  'Open Sans';
+    font-weight: 600;
+    font-size: 13px;
+    color: #414141;
+}
+
+
+
+
+
