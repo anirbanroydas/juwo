@@ -1,0 +1,131 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 27/11/2016 08:09
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-arrow:before { content: "\f100"; }
+.flaticon-arrows:before { content: "\f101"; }
+.flaticon-arrows-1:before { content: "\f102"; }
+.flaticon-arrows-2:before { content: "\f103"; }
+.flaticon-arrows-3:before { content: "\f104"; }
+.flaticon-arrows-4:before { content: "\f105"; }
+.flaticon-arrows-5:before { content: "\f106"; }
+.flaticon-arrows-6:before { content: "\f107"; }
+.flaticon-arrows-7:before { content: "\f108"; }
+.flaticon-arrows-8:before { content: "\f109"; }
+.flaticon-black:before { content: "\f10a"; }
+.flaticon-favorite:before { content: "\f10b"; }
+.flaticon-favorite-1:before { content: "\f10c"; }
+.flaticon-interface:before { content: "\f10d"; }
+.flaticon-interface-1:before { content: "\f10e"; }
+.flaticon-interface-2:before { content: "\f10f"; }
+.flaticon-interface-3:before { content: "\f110"; }
+.flaticon-interface-4:before { content: "\f111"; }
+.flaticon-interface-5:before { content: "\f112"; }
+.flaticon-interface-6:before { content: "\f113"; }
+.flaticon-interface-7:before { content: "\f114"; }
+.flaticon-repeat:before { content: "\f115"; }
+.flaticon-repeat-1:before { content: "\f116"; }
+.flaticon-repeat-2:before { content: "\f117"; }
+.flaticon-repeat-3:before { content: "\f118"; }
+.flaticon-repeat-4:before { content: "\f119"; }
+.flaticon-repeat-5:before { content: "\f11a"; }
+.flaticon-repeat-6:before { content: "\f11b"; }
+.flaticon-repeat-7:before { content: "\f11c"; }
+.flaticon-repeat-8:before { content: "\f11d"; }
+.flaticon-retweet:before { content: "\f11e"; }
+.flaticon-retweet-1:before { content: "\f11f"; }
+.flaticon-retweet-2:before { content: "\f120"; }
+.flaticon-retweet-arrows:before { content: "\f121"; }
+.flaticon-retweet-arrows-1:before { content: "\f122"; }
+.flaticon-retweet-arrows-couple-outline:before { content: "\f123"; }
+.flaticon-retweet-arrows-couple-symbol:before { content: "\f124"; }
+.flaticon-retweet-arrows-couple-symbol-square-variant:before { content: "\f125"; }
+.flaticon-retweet-arrows-symbol:before { content: "\f126"; }
+.flaticon-retweet-circular-button:before { content: "\f127"; }
+.flaticon-retweet-symbol:before { content: "\f128"; }
+.flaticon-shapes:before { content: "\f129"; }
+.flaticon-shapes-1:before { content: "\f12a"; }
+.flaticon-shapes-2:before { content: "\f12b"; }
+.flaticon-square:before { content: "\f12c"; }
+.flaticon-web:before { content: "\f12d"; }
+    
+    $font-Flaticon-arrow: "\f100";
+    $font-Flaticon-arrows: "\f101";
+    $font-Flaticon-arrows-1: "\f102";
+    $font-Flaticon-arrows-2: "\f103";
+    $font-Flaticon-arrows-3: "\f104";
+    $font-Flaticon-arrows-4: "\f105";
+    $font-Flaticon-arrows-5: "\f106";
+    $font-Flaticon-arrows-6: "\f107";
+    $font-Flaticon-arrows-7: "\f108";
+    $font-Flaticon-arrows-8: "\f109";
+    $font-Flaticon-black: "\f10a";
+    $font-Flaticon-favorite: "\f10b";
+    $font-Flaticon-favorite-1: "\f10c";
+    $font-Flaticon-interface: "\f10d";
+    $font-Flaticon-interface-1: "\f10e";
+    $font-Flaticon-interface-2: "\f10f";
+    $font-Flaticon-interface-3: "\f110";
+    $font-Flaticon-interface-4: "\f111";
+    $font-Flaticon-interface-5: "\f112";
+    $font-Flaticon-interface-6: "\f113";
+    $font-Flaticon-interface-7: "\f114";
+    $font-Flaticon-repeat: "\f115";
+    $font-Flaticon-repeat-1: "\f116";
+    $font-Flaticon-repeat-2: "\f117";
+    $font-Flaticon-repeat-3: "\f118";
+    $font-Flaticon-repeat-4: "\f119";
+    $font-Flaticon-repeat-5: "\f11a";
+    $font-Flaticon-repeat-6: "\f11b";
+    $font-Flaticon-repeat-7: "\f11c";
+    $font-Flaticon-repeat-8: "\f11d";
+    $font-Flaticon-retweet: "\f11e";
+    $font-Flaticon-retweet-1: "\f11f";
+    $font-Flaticon-retweet-2: "\f120";
+    $font-Flaticon-retweet-arrows: "\f121";
+    $font-Flaticon-retweet-arrows-1: "\f122";
+    $font-Flaticon-retweet-arrows-couple-outline: "\f123";
+    $font-Flaticon-retweet-arrows-couple-symbol: "\f124";
+    $font-Flaticon-retweet-arrows-couple-symbol-square-variant: "\f125";
+    $font-Flaticon-retweet-arrows-symbol: "\f126";
+    $font-Flaticon-retweet-circular-button: "\f127";
+    $font-Flaticon-retweet-symbol: "\f128";
+    $font-Flaticon-shapes: "\f129";
+    $font-Flaticon-shapes-1: "\f12a";
+    $font-Flaticon-shapes-2: "\f12b";
+    $font-Flaticon-square: "\f12c";
+    $font-Flaticon-web: "\f12d";
