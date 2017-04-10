@@ -1,40 +1,44 @@
-.. koatest documentation master file, created by
+.. juwo documentation master file, created by
    sphinx-quickstart on Sat Sep 24 22:41:04 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to koatest's documentation!
+Welcome to juwo's documentation!
 ===================================
+
+A full fledged **social web app** (news feed, posts/tweets, likes, comments, shares, notifications, livestreaming, IRC, private instant messaging[rabbitmq], etc...) used as an experiment for every new technology using primarily Nodejs.
+
+
+Project Home Page
+--------------------
+
+**Link :** https://github.com/anirbanroydas/juwo
+
+
+
+Details
+--------
+
+
+:Author: Anirban Roy Das
+:Email: anirban.nick@gmail.com
+:Copyright(C): 2017, Anirban Roy Das <anirban.nick@gmail.com>
+
+Check ``juwo/LICENSE`` file for full Copyright notice.
+
+
 
 Contents:
 
-1. koajs 
-2. koa-middlerwares
-3. gulp (task runners)
-4. gulp plugins
-4. babel (es6)
-5. browserify (browser requires) + watchify + bableify (babel+browserify transform)
-6. tape (test)
-7. bunyan/log4js (logging)
-8. bluebird (promise + generator + coroutines)
-9. lodash (utilities)
-10. pm2 (monitoring)
-11. amqplib/ampq.node (rabbitmq)
-12. browser-sync (for live reload with gulp -> gulp-browser-sync)
-
-
-Steps:
-------
-
-1. gulp 
-::
-	
-	npm install gulp --save-dev
-
-
-
 .. toctree::
    :maxdepth: 2
+
+   overview
+   features
+   installation
+   ci_setup
+   usage
+   testing
 
 
 
