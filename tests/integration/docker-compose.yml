@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  juwo_integration_tester:
+    build: ../..
+    image: aroyd/juwo_integration_tester:${JUWO_INTEGRATION_TEST_IMAGE_TAG:-latest}
+    environment:
+      ENV: INTEGRATION_TEST 
+    depends_on:
+      - mongodb
+      - redis
+      - rabbitmq
+  
+  mongodb:
+    image: mongo:3.4.3
+  
+  redis:
+    image: redis:3.2.8-alpine
+
+  rabbitmq:
+    image: rabbitmq:3.6.9-alpine
