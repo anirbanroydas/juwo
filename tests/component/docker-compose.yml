@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  juwo_component_tester:
+    build: 
+      context: ../..
+      dockerfile: tests/component/Dockerfile
+    image: aroyd/juwo_component_tester:${JUWO_COMPONENT_TESTER_IMAGE_TAG:-latest}
+    depends_on:
+      - juwo
+  juwo:
+    build: ../..
+    image: aroyd/juwo_component_sut:${JUWO_COMPONENT_SUT_IMAGE_TAG:-latest}
+    environment:
+      ENV: COMPONENT_TEST 
+    depends_on:
+      - mongodb
+      - redis
+      - rabbitmq
+  
+  mongodb:
+    image: mongo:3.4.3
+  
+  redis:
+    image: redis:3.2.8-alpine
+
+  rabbitmq:
+    image: rabbitmq:3.6.9-alpine
