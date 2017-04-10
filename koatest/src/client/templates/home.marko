@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="Home - nodeKoaRabbit">
+		<meta name="author" content="Anirban Roy Das">
+		<!-- <link rel="icon" href="/static/media/favicon.png"> -->
+	    <link rel="icon" href="/static/media/favicon.png">
+
+		<title>Home - nodeKoaRabbit</title>
+
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700" />
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+		<!-- Bootstrap core CSS -->
+		<!-- <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<!-- <link href="/static/css/vendors/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+		<!-- Custom styles for this template -->
+		<link href="/static/css/home.min.bundle.css" rel="stylesheet">
+		<!-- <link href="../css/home.css" rel="stylesheet"> -->
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+
+	let user_info = {
+	      		name: sess.info.name,
+	      		username: sess.info.username,
+	      		userid: sess.info.userid,
+	      		dp_thumbnail: sess.info.dp_thumbnail,
+	      		token: token,
+	      		notification_count: notification_count
+	      	};
+
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top hidden-xs" style="visibility: hidden;" >
+      		<div class="container header-container">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="/">
+          				<img class="navbar-brand img-responsive  brand-img" src="/static/media/logoblack.png" alt="Brand_image" />
+          			</a>
+          			<a class="navbar-brand" href="/">nodeKoaRabbit</a>
+        		</div>
+        		<div id="navbar" class="navbar-collapse collapse">
+		          	<ul class="nav navbar-nav navbar-right">
+			            <li>
+			            	<a href="#" class="logout-button">Logout</a>
+			            </li>
+			            <li class="dropdown">
+				        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+								<i class="fa fa-user-o"></i>
+				        	</a>
+				          	<ul class="dropdown-menu" role="menu">
+					            <li><a href="/${data.username}"><i class="fa fa-user fa-fw"></i> Profile</a></li>
+					            <li><a href="/settings/profile"><i class="fa fa-cogs fa-fw"></i> Settings</a></li>
+					            <li class="divider"></li>
+					            <li><a href="#"><i class="fa fa-power-off fa-fw"></i> Log Out</a></li>
+				          	</ul>
+				        </li>
+				        <li>
+			            	<a href="#">
+								<!-- The Profile picture inserted via div class below, with shaping provided by Bootstrap -->
+                        		<div class="img-rounded  img-responsive profile-img" src="/static/media/avatars/avatar_male_7.jpg"></div>
+			            		${data.name.firstname}
+			            	</a>
+			            </li>
+		          	</ul>
+        		</div>
+      		</div>
+    	</nav>
+
+    	<nav class="navbar navbar-default navbar-fixed-top visible-xs" >
+      		<div class="container header-container">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="#">nodeKoaRabbit</a>
+        		</div>
+        		<div id="navbar" class="navbar-collapse collapse">
+		          	<ul class="nav navbar-nav navbar-right">
+			            <li><a href="/logout">Logout</a></li>
+			            <li><a href="#">${data.user.firstname}</a></li>
+		          	</ul>
+        		</div>
+      		</div>
+    	</nav>
+
+
+		<div class="container body-container-before-loading">
+
+		  	<div class="jumbotron hidden-xs">
+		  		<div class="before-loading" >
+			    	<h2 class="before-loading-name">nodeKoaRabbit</h2>
+			    	<img class="img-responsive center-block loading-img" src="/static/media/loading.gif" alt="loading_image" />
+			    </div>
+		  	</div>
+
+		  	<div class="jumbotron visible-xs">
+		  		<div class="before-loading" >
+			    	<img class="img-responsive center-block loading-img" src="/static/media/loading.gif" alt="loading_image" />
+			    </div>
+		  	</div>
+
+		</div>
+
+		<div class="container body-container-after-loading " style="display:none;">
+		  	<div class="jumbotron jumbotron-after" >
+		  		<div class="after-loading" >
+			    	<h2 class="after-loading-name">Hello, ${data.user.firstname} :)</h2>
+			    	<p class="lead">Welcome to nodeKoaRabbit.</p>
+			    	<p class="lead2 hidden-xs">Hope you are doing great. Lets have some fun. Let's join the cult. Let's see what 
+			    	others have to say. Let's take you for a spin. We hope you will like it.</p>
+			    	<p class="lead2 visible-xs">Lets have some fun. Let's join the cult. Let's take you for a spin.</p>
+			    	<div class="row">
+			    		<div class="col-xs-6 col-sm-4">
+			    			<p class="lead3">
+			    				<button id="public" class="btn btn-default btn-sm center-block" role="button">
+			    					<!-- <a href="/chat">Public</a> -->
+			    					Public
+			    				</button>
+			    			</p>
+			    		</div>
+			    		<div class="col-xs-6 col-sm-4">
+			    			<p class="lead3">
+			    				<button id="irc" class="btn btn-default btn-sm center-block" role="button">
+			    					<!-- <a href="/chat">IRC</a> -->
+			    					IRC
+			    				</button>
+			    			</p>
+			    		</div>
+			    		<div class="col-xs-12 col-sm-4">
+			    			<p class="lead3">
+			    				<button id="private" class="btn btn-default btn-sm center-block" role="button">
+			    					<!-- <a href="/chat">Private</a> -->
+			    					Private
+			    				</button>
+			    			</p>
+			    		</div>
+			    	</div>
+			    </div>
+		  	</div>
+		</div>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<script>window.jQuery || document.write('<script src="/static/js/assets/jquery.min.js"><\/script>')</script>
+
+	  	<!-- Latest compiled and minified JavaScript -->
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="/static/js/vendors/ie10-viewport-bug-workaround.bundle.min.js"></script>
+		<script src="/static/js/home.bundle.min.js"></script>
+		<!-- <script src="../js/home.js"></script> -->
+	</body>
+</html>

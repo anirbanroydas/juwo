@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="Home - nodeKoaRabbit">
+		<meta name="author" content="Anirban Roy Das">
+		<!-- <link rel="icon" href="/static/media/favicon.png"> -->
+	    <link rel="icon" href="/static/media/favicon.png">
+
+		<title>Chat - nodeKoaRabbit</title>
+
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700" />
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+		<!-- Bootstrap core CSS -->
+		<!-- <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<!-- <link href="/static/css/vendors/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+		<!-- Custom styles for this template -->
+		<link href="/static/css/chat.min.bundle.css" rel="stylesheet">
+		<!-- <link href="../css/chat2.css" rel="stylesheet"> -->
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" >
+      		<div class="container header-container">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="/"><img class="navbar-brand img-responsive  brand-img" src="/static/media/logoblack.png" alt="loading_image" /></a>
+          			<a class="navbar-brand" href="/">nodeKoaRabbit</a>
+        		</div>
+        		<div id="navbar" class="navbar-collapse collapse">
+		          	<ul class="nav navbar-nav navbar-right">
+			            <li><a href="/logout">Logout</a></li>
+			            <li><a href="#">${data.user.firstname}</a></li>
+		          	</ul>
+        		</div>
+      		</div>
+    	</nav>
+
+  		<!-- <div class="container body-container-after-loading">
+		  	<div class="jumbotron jumbotron-after" >
+		  		<div class="chatbox center-block">
+				</div>
+		  	</div>
+		</div> -->
+
+		<div class="row chatbox-row">
+			<!-- <div class="col-sm-4 col-sm-offset-4 hidden-xs chatbox-col">
+				<div class="chatbox center-block">
+				</div>
+				<form class="form-inline publicSend" >
+					<input type="text" class="form-control" id="chatinput" placeholder="Type message here...">
+					<button type="submit" class="btn btn-default">Send</button>
+		           
+		        </form>
+			</div> -->
+			
+			<input class="socketiotocken" type="hidden" name="_socketio_token" value="${data.token}" />
+			<div class="col-sm-6 hidden-xs chatbox-col">
+				<div class="chatbox center-block">
+					
+					<div class="chatbox-header">
+						<div class="chatbox-header-content">
+							<div class="media">
+								<div class="media-left">
+								    <a href="#">
+								    	<!-- <img src="/static/media/avatars/avatar_male.jpg" alt="pofile photo" class="img-circle img-responsive avatar-thumb"/> -->
+								    	<img src="${data.dp_thumbnail}" alt="pofile photo" class="img-circle img-responsive avatar-thumb"/>
+								    </a>
+								</div>
+								<div class="media-body">
+								    <!-- <h5 class="media-username">anirbanroydas</h5> -->
+								    <h5 class="media-username">${data.username}</h5>
+								</div>
+									
+							</div>
+						</div>
+					</div>
+					
+					<div class="chatbox-content" id="groupCB">
+			            <ul class="messages">
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">nick<span class="messageBody">Hi this is anirban roy das</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">roy<span class="messageBody">Hi this is  roy das. Hoep eto fine a perfect match  her so that i can have a wonderfule envenig tonigh. jsut wna ted to know that. please come here fast.</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p  class="username">nick<span class="messageBody">Hi this is anirban roy das</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">roy<span class="messageBody">Hi this is  roy das. Hoep eto fine a perfect match  her so that i can have a wonderfule envenig tonigh. jsut wna ted to know that. please come here fast.</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">nick<span class="messageBody">Hi this is anirban roy das</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">aplusk<span class="messageBody">Hi this is  roy das. Hoep eto fine a perfect match  her so that i can have a wonderfule envenig tonigh. jsut wna ted to know that. please come here fast.</span></p>
+			            	</li>
+			         
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">roy<span class="messageBody">Hi this is  roy das. Hoep eto fine a perfect match  her so that i can have a wonderfule envenig tonigh. jsut wna ted to know that. please come here fast.</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p  class="username">nick<span class="messageBody">Hi this is anirban roy das</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">roy<span class="messageBody">Hi this is  roy das. Hoep eto fine a perfect match  her so that i can have a wonderfule envenig tonigh. jsut wna ted to know that. please come here fast.</span></p>
+			            		
+			            	</li>
+			            	<li class="message">
+			            		<p class="timeinfo2">12:32 pm</p>
+			            		<p class="username">nick<span class="messageBody">Hi this is anirban roy das</span></p>
+			            		
+			            	</li>
+			            	<li class="message typing">
+			            		<p class="timeinfo2 timeTyping">12:32 pm</p>
+			            		<p class="username">aplusk<span class="messageBody">is typing....</span></p>
+			            	</li>
+			            	<li class="message typing">
+			            		<p class="timeinfo2 timeTyping">12:32 pm</p>
+			            		<p class="username">roy<span class="messageBody">is typing....</span></p>
+			            	</li>
+			            </ul>
+			        </div>
+
+				</div>
+				<form class="form-inline center-block publicSend" >
+					<input type="text" class="form-control" id="chatinput" placeholder="Type message here...">
+					<button type="submit" class="btn btn-default">Send</button>
+		           
+		        </form>
+			</div>
+			<div class="col-sm-6 hidden-xs chatbox-col">
+				<div class="chatbox-2 center-block">
+					<div class="chatbox-header">
+						<div class="chatbox-header-content">
+							<div class="row">
+								<div class="col-xs-8">
+									<div class="media">
+										<div class="media-left">
+										    <img src="/static/media/heart_3.png" alt="pofile photo" class="img-responsive heart-thumb"/>
+										</div>
+										<div class="media-body">
+										    <h5 class="media-custom-heading">Participants...</h5>
+										</div> 		
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="count-notification center-block">
+										<p class="text-right user-count">71</p>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="chatbox-userlist">
+						<div class="list-group">
+							
+
+
+
+
+
+
+
+							<a href="#" class="list-group-item first-userlist-item">
+							    <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_2.jpeg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">anahita_sanyal</h6>
+											    <p class="userlist-last-seen">last seen yesterday at 11:06 pm</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb status-offline"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_2.jpg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">vikramSgl</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!--  <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  		
+							  </a>
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_3.jpg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">badgirl</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											 <!-- <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  
+							  <a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_3.jpg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">rakeshbansal</h6>
+											    <p class="userlist-last-seen">last seen today at 01:32 am<</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  <a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_4.jpeg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">little_carmen</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!--  <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_4.jpeg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">aplusk</h6>
+											    <p class="userlist-last-seen">last seen on 13/10/16 at 08:15 pm</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>					
+								
+							<a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_5.jpg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">therealkhan</h6>
+											    <p class="userlist-last-seen">last seen today at 03:30 am<</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  <a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_5.jpeg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">elixir_17</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!--  <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_6.jpeg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">shaliniojha</h6>
+											    <p class="userlist-last-seen">last seen on yesterday at 11:15 pm</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>	
+
+
+
+
+
+
+
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_7.jpg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">priyanka_b</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!--  <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  		
+							  </a>
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_6.png" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">saketgarodia</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											 <!-- <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  
+							  <a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_8.jpeg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">thekim_k</h6>
+											    <p class="userlist-last-seen">last seen today at 12:57 am<</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  <a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_7.jpg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">varundvn</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!--  <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_8.png" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">iamsrk</h6>
+											    <p class="userlist-last-seen">last seen on yesterday at 08:15 pm</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>					
+								
+							<a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_9.jpg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">rashmikaM</h6>
+											    <p class="userlist-last-seen">last seen today at 02:30 am<</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  <a href="#" class="list-group-item">
+							  	 <div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_male_9.png" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">shashank_shekhar</h6>
+											    <p class="userlist-last-seen">Online</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!--  <p class="online-symbol text-center"> &#9749;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/online_6.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>
+							  
+							  <a href="#" class="list-group-item">
+							  	<div class="row">
+							  		<div class="col-xs-10">
+									  	<div class="media">
+											<div class="media-left media-custom-left">
+											    	<img src="/static/media/avatars/avatar_female_10.jpeg" alt="pofile photo" class="img-responsive img-circle userlist-thumb"/>
+											</div>
+											<div class="media-body media-custom-body">
+											    <h6 class="media-heading userlist-name">iamsanjeeda</h6>
+											    <p class="userlist-last-seen">last seen on today at 11:15 pm</p>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xs-2">
+										<div class="right-notification center-block">
+											<!-- <p class="offline-symbol text-center">&#9731;</p> -->
+											<!-- <div class="badge">14</div> -->
+											<img src="/static/media/offline_4.png" alt="pofile photo" class="img-responsive img-circle center-block status-thumb"/>
+										</div>
+									</div>
+								</div>
+							  </a>			
+
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+							  
+							  
+
+							</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 visible-xs chatbox-col-2">
+				<div class="chatbox">
+					<div class="chatbox-header">
+						<div class="chatbox-header-content">
+							<div class="media">
+								<div class="media-left">
+								    <a href="#">
+								    	<img src="/static/media/avatars/avatar_female.png" alt="pofile photo" class="img-circle img-responsive avatar-thumb"/>
+								    </a>
+								</div>
+								<div class="media-body">
+								    <h5 class="media-username">imouniroy</h5>
+								</div>
+									
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<input type="text" class="mobile-send" id="mobilechatinput" placeholder="Type message here...">
+			</div>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<script>window.jQuery || document.write('<script src="/static/js/assets/jquery.min.js"><\/script>')</script>
+
+	  	<!-- Latest compiled and minified JavaScript -->
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="/static/js/vendors/ie10-viewport-bug-workaround.bundle.min.js"></script>
+		<script src="/static/js/chat.bundle.min.js"></script>
+		<!-- <script src="../js/chat2.js"></script> -->
+	</body>
+</html>

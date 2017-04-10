@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <meta name="description" content="Login into nodeKoaRabbit">
+	    <meta name="author" content="Anirban Roy Das">
+	    <!-- <link rel="icon" href="/static/media/favicon.png"> -->
+	    <link rel="icon" href="/static/media/favicon.png">
+
+	    <title>Login into nodeKoaRabbit</title>
+		
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700" />
+
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	    <!-- Bootstrap core CSS -->
+	    <!-- <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <!-- <link href="/static/css/vendors/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+	    <!-- Custom styles for this template -->
+	    <link href="/static/css/auth.min.bundle.css" rel="stylesheet">
+	    <!-- <link href="../css/auth.css" rel="stylesheet"> -->
+
+	    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+  	</head>
+
+  	<body>
+    	<nav class="navbar navbar-default navbar-static-top">
+          	<div class="container">
+           		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="/">nodeKoaRabbit</a>
+        		</div>
+        		<div id="navbar" class="navbar-collapse collapse">
+          			<!-- <ul class="nav navbar-nav">
+			            <li class="active"><a href="#">Home</a></li>
+			            <li><a href="#about">About</a></li>
+			            <li><a href="#contact">Contact</a></li>
+			        </ul> -->
+		          	<ul class="nav navbar-nav navbar-right">
+			            <li><a href="#">About Us</a></li>
+			            <li><a href="#">Blog</a></li>
+			            <li><a href="/signup">Don't have an account? Sign-up</a></li>
+		          	</ul>
+        		</div><!--/.nav-collapse -->
+          	</div>
+      	</nav>
+
+
+    	<div class="container body-container">
+		    
+
+	        <form class="form-signin" action="" role="form">
+	            <h2 class="form-signin-heading">Sign in now.</h2>
+				<if(data.error === false)>
+		            <div class="form-group username-form-group">
+		            	<label for="inputEmail" class="sr-only">Username</label>
+		            	<input type="text" id="inputUsernameLogin" class="inputEmailLogin form-control" name="uname" placeholder="Email or username" required>
+		            	
+	            		<span class="glyphicon glyphicon-ok form-control-feedback username-success-feedback" aria-hidden="true" style="display: none;"></span>
+	  					<span id="inputSuccess1Status" class="sr-only username-success-feedback" style="display: none;">(success)</span>
+	  					<span class="glyphicon glyphicon-remove form-control-feedback username-error-feedback" aria-hidden="true" style="display: none;"></span>
+	  					<span id="inputError1Status" class="sr-only username-error-feedback" style="display: none;">(error)</span>
+	  					<span id="helpBlock1" class="help-block username-helpblock" style="display: none;">Wrong Username format</span>
+		            </div>
+	            </if>
+	            <else>
+	            	<if(data.error.uname === "true")>
+		  				<div class="form-group username-form-group has-error has-feedback">	
+		  					<label for="inputEmail" class="sr-only">Username</label>
+		            		<input type="text" id="inputUsernameLogin" class="inputEmailLogin form-control" name="uname" placeholder="Email or username" required>	  				
+	  						<span class="glyphicon glyphicon-ok form-control-feedback username-success-feedback" aria-hidden="true" style="display: none;"></span>
+		  					<span id="inputSuccess1Status" class="sr-only username-success-feedback" style="display: none;">(success)</span>
+		  					<span class="glyphicon glyphicon-remove form-control-feedback username-error-feedback" aria-hidden="true"></span>
+		  					<span id="inputError1Status" class="sr-only username-error-feedback">(error)</span>
+		  					<span id="helpBlock1" class="help-block username-helpblock">Wrong Username format</span>
+			  			</div>
+			  		</if>
+			  		<else>
+			  			<div class="form-group username-form-group has-success has-feedback">
+				  			<label for="inputEmail" class="sr-only">Username</label>
+			            	<input type="text" id="inputUsernameLogin" class="inputEmailLogin form-control" name="uname" placeholder="Email or username" required>
+		  					<span class="glyphicon glyphicon-ok form-control-feedback username-success-feedback" aria-hidden="true" ></span>
+		  					<span id="inputSuccess1Status" class="sr-only username-success-feedback">(success)</span>
+		  					<span class="glyphicon glyphicon-remove form-control-feedback username-error-feedback" aria-hidden="true" style="display: none;"></span>
+		  					<span id="inputError1Status" class="sr-only username-error-feedback" style="display: none;">(error)</span>
+		  					<span id="helpBlock1" class="help-block username-helpblock" style="display: none;">Wrong Username format</span>
+			  			</div>
+			  		</else>			  		
+		  		</else>
+
+		  		<if(data.error === false)>
+		            <div class="form-group password-form-group">
+		            	<label for="inputPassword" class="sr-only">Password</label>
+		            	<input type="password" id="inputPasswordLogin" class="inputPasswordLogin form-control" name="pwd" placeholder="Password" required>
+		            	<span class="glyphicon glyphicon-ok form-control-feedback password-success-feedback" aria-hidden="true" style="display: none;"></span>
+	  					<span id="inputSuccess2Status" class="sr-only password-success-feedback" style="display: none;">(success)</span>
+	  					<span class="glyphicon glyphicon-remove form-control-feedback password-error-feedback" aria-hidden="true" style="display: none;"></span>
+	  					<span id="inputError2Status" class="sr-only password-error-feedback" style="display: none;">(error)</span>
+	  					<span id="helpBlock2" class="help-block password-helpblock" style="display: none;">Wrong Password format</span>
+		            </div>
+		        </if>
+		        <else>
+	            	<if(data.error.pwd === "true")>
+	            		<div class="form-group password-form-group has-error has-feedback">
+			            	<label for="inputPassword" class="sr-only">Password</label>
+			            	<input type="password" id="inputPasswordLogin" class="inputPasswordLogin form-control" name="pwd" placeholder="Password" required>
+			            	<span class="glyphicon glyphicon-ok form-control-feedback password-success-feedback" aria-hidden="true" style="display: none;"></span>
+		  					<span id="inputSuccess2Status" class="sr-only password-success-feedback" style="display: none;">(success)</span>
+		  					<span class="glyphicon glyphicon-remove form-control-feedback password-error-feedback" aria-hidden="true"></span>
+		  					<span id="inputError2Status" class="sr-only password-error-feedback">(error)</span>
+		  					<span id="helpBlock2" class="help-block password-helpblock">Wrong Password format</span>
+			            </div>
+			        </if>
+			        <else>
+						<div class="form-group password-form-group has-success has-feedback">
+			            	<label for="inputPassword" class="sr-only">Password</label>
+			            	<input type="password" id="inputPasswordLogin" class="inputPasswordLogin form-control" name="pwd" placeholder="Password" required>
+			            	<span class="glyphicon glyphicon-ok form-control-feedback password-success-feedback" aria-hidden="true" ></span>
+		  					<span id="inputSuccess2Status" class="sr-only password-success-feedback">(success)</span>
+		  					<span class="glyphicon glyphicon-remove form-control-feedback password-error-feedback" aria-hidden="true" style="display: none;"></span>
+		  					<span id="inputError2Status" class="sr-only password-error-feedback" style="display: none;">(error)</span>
+		  					<span id="helpBlock2" class="help-block password-helpblock" style="display: none;">Wrong Password format</span>
+			            </div>
+			        </else>
+			    </else>
+	            
+	            <if(data.error !== false && data.error.error === "true")>
+					<div class="form-group invalid-form-group has-error">
+		            	<input type="hidden" id="csrfInput" class="inputPasswordLogin form-control" name="_csrf" value="${data.csrf}" >
+		            	<span id="helpBlock3" class="help-block error-helpblock">Invalid Username or Password</span>
+		            </div>
+		        </if>
+	            <else>
+		            <div class="form-group invalid-form-group">
+		            	<input type="hidden" id="csrfInput" class="inputPasswordLogin form-control" name="_csrf" value="${data.csrf}" >
+		            	<span id="helpBlock3" class="help-block error-helpblock" style="display: none;">Invalid Username or Password</span>
+		            </div>
+		        </else>
+
+				<if(data.error !== false && data.error.server === "true")>
+		            <div class="form-group has-error error-form-group">
+		            	<span id="helpBlock4" class="help-block">Something is not working! Try again later</span>
+		            </div>
+		        </if>
+				<else>
+					<div class="form-group has-error error-form-group" style="display: none;">
+		            	<span id="helpBlock4" class="help-block">Something is not working! Try again later</span>
+		            </div>
+				</else>	
+
+	            <div class="checkbox">
+	                <label>
+	                  <input class="rememberme" type="checkbox" name="remember" value="yes"> Remember me
+	                </label>
+	            </div>
+	            <button class="btn btn-lg btn-primary btn-block signinbutton" type="submit">Sign in</button>
+	        </form>
+
+	        <footer class="footer">
+	          <p>&copy; 2016 nodeKoaRabbit, Inc.</p>
+	        </footer>
+
+    	</div> 
+
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<script>window.jQuery || document.write('<script src="/static/js/assets/jquery.min.js"><\/script>')</script>
+
+	  	<!-- Latest compiled and minified JavaScript -->
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	  	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	  	<script src="/static/js/vendors/ie10-viewport-bug-workaround.bundle.min.js"></script>
+	  	<script src="/static/js/login.bundle.min.js"></script>
+  	</body>
+</html>
