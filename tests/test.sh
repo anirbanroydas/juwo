@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$5"/docker.env
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
@@ -50,11 +52,11 @@ DOCKER_TEST_CONTAINER="$3_$1_$2_tester_1"
 TEST_EXIT_CODE=$($DOCKER wait "$DOCKER_TEST_CONTAINER")
 
 
-echo "Current dir : $5"
-echo "Copyting coverage report data file to project root directory only if Unit Test"
-if [ "$2" = "unit" ]; then
-	$DOCKER cp "$DOCKER_TEST_CONTAINER":/project/.coverage "$5"/.coverage.unit_docker
-fi
+# echo "Current dir : $5"
+# echo "Copyting coverage report data file to project root directory only if Unit Test"
+# if [ "$2" = "unit" ]; then
+# 	$DOCKER cp "$DOCKER_TEST_CONTAINER":/project/.coverage "$5"/.coverage.unit_docker
+# fi
 
 echo "Test Containers Logs"
 $DOCKER logs "$DOCKER_TEST_CONTAINER"
