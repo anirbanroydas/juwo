@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  juwo_e2e_tester:
+    build: ../..
+    image: aroyd/juwo_e2e_tester:${JUWO_E2E_TEST_IMAGE_TAG:-latest}
+    environment:
+      ENV: END_TO_END_TEST 
+    depends_on:
+      - mongodb
+      - redis
+      - rabbitmq
+  
+  mongodb:
+    image: mongo:3.4.3
+  
+  redis:
+    image: redis:3.2.8-alpine
+
+  rabbitmq:
+    image: rabbitmq:3.6.9-alpine
