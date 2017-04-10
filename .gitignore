@@ -122,6 +122,10 @@ logs
 *.log
 npm-debug.log*
 
+# src files 
+public/
+!koatest/src/lib/
+
 # Runtime data
 pids
 *.pid
