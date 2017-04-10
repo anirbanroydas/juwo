@@ -1,6 +1,6 @@
 # juwo
 
-A full fledged web app (news feed, notifications, livestreaming, IRC, private instant messaging[rabbitmq], etc...) used as an experiment for every new technology using primarily Nodejs.
+A full fledged **social web app** (news feed, posts/tweets, likes, comments, shares, notifications, livestreaming, IRC, private instant messaging[rabbitmq], etc...) used as an experiment for every new technology using primarily Nodejs.
 
 ## Documentation
 
@@ -26,7 +26,7 @@ Check  ` ci-testing-python/LICENSE  ` file for full Copyright notice.
 
 ## Overview
 
-Its a full fledged web app which consists of **instant messaging** both public and private, **news feed**, **tweet-like** feature, **notifications**, **livestream of activities** and a **web interface** to view and use the application.
+Its a full fledged **social web app** which consists of **instant messaging** both public and private, **news feed**, **tweet-like** feature, with **comments**, **likes**, **shares**, notifications**, **livestream of activities** and a **web interface** to view and use the application.
 
 **NOTE:** This is a smaple project still in progress.
 
