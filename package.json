@@ -4,7 +4,8 @@
   "description": "",
   "main": "koatest/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node koatest/server.js"
   },
   "author": "Anirban Roy Das",
   "license": "ISC",
